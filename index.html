@@ -1,5 +1,892 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting to https://github.com/Paul-Andre/</title>
-<meta http-equiv="refresh" content="0; URL=https://github.com/Paul-Andre/">
-<link rel="canonical" href="https://github.com/Paul-Andre/">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul-Andre Henegar - Software Engineer & Computer Scientist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        :root {
+            --primary-color: #00a8e8;
+            --secondary-color: #007ea7;
+            --background-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --card-background: #2c2c2c;
+            --header-font: 'Oswald', sans-serif;
+            --body-font: 'Lato', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--body-font);
+            line-height: 1.7;
+            color: var(--text-color);
+            background: var(--background-color);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #001f3f 0%, #1a1a1a 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero {
+            padding: 8rem 0 6rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-family: var(--header-font);
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            text-shadow: 0 0 15px rgba(0, 168, 232, 0.3);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        
+        .hero .meta-highlight {
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: var(--primary-color);
+            color: var(--background-color);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .hero .meta-highlight:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 168, 232, 0.5);
+        }
+        
+        .hero .location {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 3rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 2.5rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-family: var(--header-font);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 400;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--background-color);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--background-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(26, 26, 26, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            font-family: var(--header-font);
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Sections */
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-family: var(--header-font);
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .meta-highlight-text {
+            color: var(--primary-color);
+            font-weight: 700;
+            text-shadow: 0 0 8px rgba(0, 168, 232, 0.3);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-background);
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: var(--header-font);
+            color: var(--primary-color);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 2rem 0;
+            padding-left: 5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: calc(2rem - 8px);
+            top: 2.5rem;
+            width: 18px;
+            height: 18px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            border: 4px solid var(--background-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .timeline-item:hover::before {
+            background: var(--primary-color);
+        }
+        
+        .timeline-item.meta-experience::before {
+            background: var(--primary-color);
+            box-shadow: 0 0 20px rgba(0, 168, 232, 0.5);
+        }
+        
+        .timeline-content {
+            background: var(--card-background);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        .meta-experience .timeline-content {
+            border: 2px solid var(--primary-color);
+            background: linear-gradient(135deg, #2c2c2c 0%, #333 100%);
+        }
+        
+        .timeline-date {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .timeline-title {
+            font-size: 1.5rem;
+            font-family: var(--header-font);
+            font-weight: 700;
+            margin: 0.5rem 0;
+            color: white;
+        }
+        
+        .timeline-company {
+            color: #bbb;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .meta-company {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .timeline-description {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .timeline-description ul {
+            margin-left: 1.5rem;
+            list-style-type: '✓  ';
+        }
+        
+        .timeline-description li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .skill-category {
+            background: var(--card-background);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-family: var(--header-font);
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .skill-tag {
+            background: #444;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            background: var(--primary-color);
+            color: var(--background-color);
+            transform: scale(1.1);
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .project-card {
+            background: var(--card-background);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .project-header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 1.5rem;
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+            font-family: var(--header-font);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-tech {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-description {
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+        
+        .project-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+            align-self: flex-start;
+        }
+        
+        .project-link:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            background: var(--card-background);
+            padding: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 1px solid var(--primary-color);
+        }
+        
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-family: var(--header-font);
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            color: var(--primary-color);
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            background: #111;
+            color: #888;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                gap: 1.5rem;
+            }
+            .container {
+                padding: 0 1rem;
+            }
+            .experience-timeline::before {
+                left: 1rem;
+            }
+            .timeline-item {
+                padding-left: 3rem;
+            }
+            .timeline-item::before {
+                left: calc(1rem - 8px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="hero" data-aos="fade-in" data-aos-duration="1000">
+                <h1>Paul-Andre Henegar</h1>
+                <p class="subtitle">Software Engineer & Computer Scientist</p>
+                <div class="meta-highlight">Ex-Meta/Facebook Engineer</div>
+                <p class="location">Montreal, Quebec</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="https://github.com/paul-andre" class="btn btn-secondary" target="_blank">View GitHub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>About Me</h2>
+                <p>A fusion of systems programming, machine learning, and computational biology.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right" data-aos-duration="800">
+                    <p>I'm a <span class="highlight">Master's graduate in Computer Science</span> from McGill University, with a deep-seated foundation in both theoretical computer science and practical software engineering. My research carved a niche in <span class="highlight">RNA 3D structure prediction</span>, where I merged computational biology with advanced machine learning.</p>
+                    <p>My tenure at <span class="meta-highlight-text">Meta/Facebook</span> on the Express Backbone team gave me hands-on experience with inter-datacenter networking at a global scale. This, combined with a passion for competitive programming, has honed my ability to tackle complex algorithmic challenges within robust, large-scale systems.</p>
+                    <p>I thrive on architecting resilient, scalable solutions and translating cutting-edge research into real-world impact.</p>
+                </div>
+                <div class="stats" data-aos="fade-left" data-aos-duration="800">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <span class="stat-number">3.93</span>
+                        <span class="stat-label">Undergrad GPA</span>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <span class="stat-number">3rd</span>
+                        <span class="stat-label">ICPC Regional Rank</span>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <span class="stat-number">Top 1k</span>
+                        <span class="stat-label">Google Code Jam</span>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Programming Languages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" style="background: #222;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Career Journey</h2>
+                <p>Professional experience spanning elite software engineering, research, and education.</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Aug 2024 - Nov 2024</div>
+                        <div class="timeline-title">JNI Contract Developer</div>
+                        <div class="timeline-company">Stealth Startup</div>
+                        <div class="timeline-description">
+                            Specialized contract work focusing on Java Native Interface (JNI) development, bridging Java applications with native C/C++ libraries for performance-critical operations.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sept 2020 - Oct 2023</div>
+                        <div class="timeline-title">Master's Researcher</div>
+                        <div class="timeline-company">McGill University</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Developed novel RNA 3D structure prediction algorithms using loop motif assembly.</li>
+                                <li>Engineered comprehensive data pipelines in Python for large-scale structural biology analysis.</li>
+                                <li>Specialized in advanced coursework including NLP, ML Theory, and Matrix Computations.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item meta-experience" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018 - 2020</div>
+                        <div class="timeline-title">Software Engineer</div>
+                        <div class="timeline-company meta-company">Meta/Facebook (Express Backbone Team)</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li><strong>Architected & Maintained Meta's inter-datacenter software-defined network,</strong> a critical infrastructure serving billions of users.</li>
+                                <li><strong>Developed high-performance C++ services</strong> and network daemons for massive-scale distributed systems.</li>
+                                <li><strong>Engineered Python CLI tools</strong> for network operations, monitoring, and troubleshooting at Meta's scale.</li>
+                                <li><strong>Resolved complex packet-drop issues</strong> in production networks handling petabytes of data daily.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                 <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020 - 2022</div>
+                        <div class="timeline-title">Teaching Assistant</div>
+                        <div class="timeline-company">McGill University</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Graded exams and assignments for core computer science courses.</li>
+                                <li>Mentored students in debugging code and understanding complex algorithms.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Technical Arsenal</h2>
+                <p>A comprehensive toolkit of languages, frameworks, and technologies.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Rust</span>
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">OCaml</span>
+                        <span class="skill-tag">Haskell</span>
+                        <span class="skill-tag">Scheme</span>
+                        <span class="skill-tag">x86-64 ASM</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Specialized Areas</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Computational Biology</span>
+                        <span class="skill-tag">Network Programming</span>
+                        <span class="skill-tag">Systems Design</span>
+                        <span class="skill-tag">Competitive Programming</span>
+                        <span class="skill-tag">Compilers</span>
+                        <span class="skill-tag">NLP</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Web & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">GNU/Linux</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Maven</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="background: #222;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Featured Projects</h2>
+                <p>A selection of projects showcasing technical depth and creative problem-solving.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="zoom-in-up">
+                    <div class="project-header">
+                        <div class="project-title">Unflip Puzzle Game</div>
+                        <div class="project-tech">HTML5, JavaScript, Game Development</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description">
+                            An independently developed and launched HTML5 puzzle game with sophisticated logic, responsive design, and an engaging user experience.
+                        </div>
+                        <a href="https://unflipgame.com" class="project-link" target="_blank">Play The Game →</a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-title">RNA Structure Prediction</div>
+                        <div class="project-tech">Python, ML, Computational Biology</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description">
+                            Master's thesis project developing novel algorithms for RNA 3D structure prediction. Involved complex data pipelines and rigorous quality analysis.
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-title">Go Compiler</div>
+                        <div class="project-tech">Rust, Flex, Bison, Compiler Design</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description">
+                            A complete compiler for a subset of the Go language, built from scratch in Rust with Flex/Bison for lexing and parsing.
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="project-header">
+                        <div class="project-title">Lisp Interpreter</div>
+                        <div class="project-tech">x86-64 Assembly, Systems Programming</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description">
+                            A low-level Lisp interpreter written entirely in x86-64 assembly, using direct Linux system calls. A deep dive into computer architecture.
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="project-header">
+                        <div class="project-title">Competitive Programming Bots</div>
+                        <div class="project-tech">AI, Game Theory, Various Languages</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description">
+                            Developed autonomous game-playing bots for platforms like Halite, Battlecode, Generals.io, and Screeps.io, competing against other programmers.
+                        </div>
+                    </div>
+                </div>
+                 <div class="project-card" data-aos="zoom-in-up" data-aos-delay="500">
+                    <div class="project-header">
+                        <div class="project-title">Advanced Algorithms</div>
+                        <div class="project-tech">Optimization, Data Structures</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description">
+                            A collection of high-performance algorithm implementations, including a Sudoku solver, Rubik's Cube solver, and a Java bytecode optimizer.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Let's Build Something</h2>
+                <p>I'm open to new opportunities and interesting conversations.</p>
+            </div>
+            <div class="contact-info" data-aos="zoom-in" data-aos-duration="800">
+                <h3>Connect With Me</h3>
+                <div class="contact-links">
+                    <a href="mailto:paul-andre.henegar@mail.mcgill.ca" class="contact-link">
+                        📧 paul-andre.henegar@mail.mcgill.ca
+                    </a>
+                    <a href="tel:438-530-3279" class="contact-link">
+                        📞 438-530-3279
+                    </a>
+                    <a href="https://github.com/paul-andre" class="contact-link" target="_blank">
+                        🔗 GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/paul-andre-henegar" class="contact-link" target="_blank">
+                        💼 LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Paul-Andre Henegar. Engineered with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          once: true, // Whether animation should happen only once - while scrolling down
+          anchorPlacement: 'top-bottom', // Defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
+</body>
+</html>
